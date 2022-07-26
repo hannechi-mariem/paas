@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: hannechimariempaas 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hannechimariempaas
+  template:
+    metadata:
+      labels:
+        app: hannechimariempaas 
+    spec:
+      containers:
+        - name: hannechimariempaas 
+          image: paascr.azurecr.io/hannechimariempaas
+          ports:
+          - containerPort: 80
