@@ -4,11 +4,12 @@ on:
   workflow_dispatch:
   push:
     branches:
-    - komodor
+    - dev
  
 env:
   IMAGE_NAME: komodor-demo
-  CONTAINER_REGISTRY: acrdbtekdev.azurecr.io  
+  CONTAINER_REGISTRY: paascr.azurecr.io
+  
 
 jobs:
   build-image:
@@ -56,7 +57,7 @@ jobs:
       uses: azure/aks-set-context@v1
       with:
         creds: '${{ secrets.DBTEKDEV_SP }}' 
-        resource-group: 'AKSDev'
+        resource-group: 'Paas'
         cluster-name: 'AKS-DevCluster'
     
     - name: Deploy to Kubernetes cluster

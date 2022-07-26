@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: komodor-demo 
   annotations:
-    app.komodor.com/app: https://github.com/n3wt0n/Deploy-to-AKS
+    app.komodor.com/app: https://github.com/hannechi-mariem/paas
     app.komodor.com/app.ref: #{SOURCEVERSION}#
     app.komodor.com/deploy.link.davide: "https://ciao.gino.it"
 spec:
